@@ -17,6 +17,7 @@ public class GameController {
 	
 	@RequestMapping(value="/result", method = RequestMethod.GET)
 	public String result() {
-		return "Player score : " + Score.getPlayerScore() + " Computer score : " + Score.getComputerScore();
+		return "Player score : " + Score.getPlayerScore() + " Computer score : " + Score.getComputerScore() + " Games played : " + Score.getGames() + " Ties : " + Score.getTies();
 	}
 }
+
