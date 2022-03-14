@@ -38,14 +38,18 @@ public class GameModel {
 			String playerChoice = choice;	
 			if(playerChoice.equals("rock")) {
 				if(computerChoice.equals("rock")) {
+					Score.setTies(Score.getTies() +1);
+					Score.setGames(Score.getGames() + 1);
 					return "Tie";
 				}
 				if(computerChoice.equals("paper")) {
 					Score.setComputerScore(Score.getComputerScore() + 1);
+					Score.setGames(Score.getGames() + 1);
 					return "Player choose : " + playerChoice + " Computer choose : " + computerChoice + " Computer won";
 				}
 				if(computerChoice.equals("scissors")) {
 					Score.setPlayerScore(Score.getPlayerScore() + 1);
+					Score.setGames(Score.getGames() + 1);
 					return "Player choose : " + playerChoice + " Computer choose : " + computerChoice + " Player won";
 				}
 				
@@ -54,13 +58,17 @@ public class GameModel {
 			if(playerChoice.equals("paper")) {
 				if(computerChoice.equals("rock")) {
 					Score.setPlayerScore(Score.getPlayerScore() + 1);
+					Score.setGames(Score.getGames() + 1);
 					return "Player choose : " + playerChoice + " Computer choose : " + computerChoice + " Tie";
 				}
 				if(computerChoice.equals("paper")) {
+					Score.setTies(Score.getTies() +1);
+					Score.setGames(Score.getGames() + 1);
 					return "Tie";
 				}
 				if(computerChoice.equals("scissors")) {
 					Score.setComputerScore(Score.getComputerScore() + 1);
+					Score.setGames(Score.getGames() + 1);
 					return "Player choose : " + playerChoice + " Computer choose : " + computerChoice + " Computer won";
 				}
 			}
@@ -68,13 +76,17 @@ public class GameModel {
 			if(playerChoice.equals("scissors")) {
 				if(computerChoice.equals("rock")) {
 					Score.setComputerScore(Score.getComputerScore() + 1);
+					Score.setGames(Score.getGames() + 1);
 					return "Player choose : " + playerChoice + " Computer choose : " + computerChoice + " Computer won";
 				}
 				if(computerChoice.equals("paper")) {
 					Score.setPlayerScore(Score.getPlayerScore() + 1);
+					Score.setGames(Score.getGames() + 1);
 					return "Player choose : " + playerChoice + " Computer choose : " + computerChoice + " Tie";
 				}
 				if(computerChoice.equals("scissors")) {
+					Score.setTies(Score.getTies() +1);
+					Score.setGames(Score.getGames() + 1);
 					return "Tie";
 				}
 			}
@@ -87,3 +99,4 @@ public class GameModel {
 	}
 
 }
+
